@@ -401,6 +401,7 @@ require('lazy').setup({
 
       vim.keymap.set('n', '<leader>xs', builtin.git_status, { desc = 'Git [S]tatus' })
       vim.keymap.set('n', '<leader>xb', builtin.git_branches, { desc = 'Git [B]ranches' })
+      vim.keymap.set('n', '<leader>xr', require('gitsigns').reset_hunk, { desc = '[R]eset hunk' })
     end,
   },
 
@@ -748,7 +749,12 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-
+  {
+    'rebelot/kanagawa.nvim',
+    init = function()
+      vim.cmd.colorscheme 'kanagawa'
+    end,
+  },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -838,7 +844,7 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
 
