@@ -749,12 +749,7 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-  {
-    'rebelot/kanagawa.nvim',
-    init = function()
-      vim.cmd.colorscheme 'kanagawa'
-    end,
-  },
+
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
