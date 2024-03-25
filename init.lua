@@ -229,6 +229,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'm4xshen/autoclose.nvim', -- autoclose brackets and other things
   {
     'nvim-tree/nvim-tree.lua',
     opts = {
